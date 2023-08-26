@@ -18,17 +18,38 @@
     <main
       class="px-16 pb-16 pt-12 rounded-md bg-white shadow-md w-card -mt-3 text-center"
     >
-      <h1 class="font-montserrat font-semibold text-2xl mb-4 text-title">
-        Jogo da Adivinhação
-      </h1>
-      <p class="text-title opacity-80">Adivinhe um número entre 0 e 10</p>
+      <div id="screen1">
+        <h1 class="font-montserrat font-semibold text-2xl mb-4 text-title">
+          Jogo da Adivinhação
+        </h1>
+        <p class="text-title opacity-80">Adivinhe um número entre 0 e 10</p>
 
-      <form class="mt-12 flex justify-center">
-        <input class="p-4 bg-slate-200 w-16 rounded-l-md" type="number" />
-        <button class="p-4 bg-indigo-500 text-white font-bold rounded-r-md">
-          Tentar
+        <form class="mt-12 flex justify-center">
+          <input
+            id="inputNumber"
+            class="p-4 bg-slate-200 w-16 rounded-l-md"
+            type="number"
+          />
+          <button
+            id="btnTry"
+            class="p-4 bg-indigo-500 text-white font-bold rounded-r-md cursor-pointer hover:brightness-90"
+          >
+            Tentar
+          </button>
+        </form>
+      </div>
+
+      <div id="screen2" class="hidden">
+        <h2 class="text-2xl font-normal m-8">Acertou em 3 vezes</h2>
+        <button
+          id="btnAgain"
+          class="p-4 bg-indigo-500 text-white font-bold rounded-md cursor-pointer hover:bg-indigo-600 duration-150"
+        >
+          Jogar novamente
         </button>
-      </form>
+      </div>
     </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>
